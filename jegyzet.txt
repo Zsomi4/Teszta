@@ -1,0 +1,9 @@
+SELECT COUNT(tesztak.id) FROM tesztak
+inner join kategoriak on tesztak.kategoriaId = kategoriaId where kategoriak.id = "Körettészták";
+
+select kategoriak.nev from tesztak
+inner join kategoriak on tesztak.kategoriaId = kategoriak.id
+where tesztak.nev = "Durum fodroskocka"
+
+insert into rendeleselemek(rendelesid, tesztaid, mennyiseg) values(3265, (select tesztak.id from tesztak where tesztak.nev = "Spenótos lasagne" ),25)
+
